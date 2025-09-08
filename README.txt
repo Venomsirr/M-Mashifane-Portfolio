@@ -1,0 +1,1 @@
+Static portfolio for Mahlatsi Mashifane. Deploy to GitHub Pages or any static host.

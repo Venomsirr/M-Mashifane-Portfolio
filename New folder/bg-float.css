@@ -1,0 +1,22 @@
+/* Animated floating 3D laptops and safety tools (CSS only, for fallback/decoration) */
+.bg-float-img {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.92;
+  filter: drop-shadow(0 0 24px #00ffd088) brightness(1.1);
+  transition: transform 1.2s cubic-bezier(.4,0,.2,1), opacity 0.7s;
+}
+.laptop1 { left: 6vw; top: 12vh; width: 120px; transform: rotate(-8deg) scale(1.08); animation: float-laptop1 7s ease-in-out infinite alternate; }
+.laptop2 { right: 8vw; top: 18vh; width: 110px; transform: rotate(10deg) scale(1.04); animation: float-laptop2 8s ease-in-out infinite alternate; }
+.laptop3 { left: 18vw; bottom: 12vh; width: 100px; transform: rotate(-6deg) scale(1.02); animation: float-laptop3 6.5s ease-in-out infinite alternate; }
+.safety { right: 12vw; bottom: 10vh; width: 90px; transform: rotate(7deg) scale(1.05); animation: float-safety 7.5s ease-in-out infinite alternate; }
+
+@keyframes float-laptop1 { 0%{transform:rotate(-8deg) scale(1.08) translateY(0);} 100%{transform:rotate(-8deg) scale(1.08) translateY(-24px);} }
+@keyframes float-laptop2 { 0%{transform:rotate(10deg) scale(1.04) translateY(0);} 100%{transform:rotate(10deg) scale(1.04) translateY(-18px);} }
+@keyframes float-laptop3 { 0%{transform:rotate(-6deg) scale(1.02) translateY(0);} 100%{transform:rotate(-6deg) scale(1.02) translateY(-20px);} }
+@keyframes float-safety { 0%{transform:rotate(7deg) scale(1.05) translateY(0);} 100%{transform:rotate(7deg) scale(1.05) translateY(-16px);} }
+
+@media (max-width: 900px) {
+  .bg-float-img { display: none; }
+}
