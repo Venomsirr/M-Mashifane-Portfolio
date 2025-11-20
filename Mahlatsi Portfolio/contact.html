@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Mahlatsi Mashifane</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-icon">MM</div>
+                <div class="logo-text">
+                    <div class="name">Mahlatsi Mashifane</div>
+                    <div class="title">Safety Management • Web Developer</div>
+                </div>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="experience.html" class="nav-link">Experience</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+                <button class="theme-toggle" id="themeToggle">🌙</button>
+            </div>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-title fly-in">Get In Touch</h1>
+            <p class="page-subtitle slide-up">Let's discuss opportunities and collaborations</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="contact-content">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h2 class="section-title slide-in-left">Let's Start a Conversation</h2>
+                    <p class="contact-intro slide-up">
+                        I'm always open to discussing new opportunities, safety management roles, 
+                        web development projects, or potential collaborations. Whether you need a 
+                        professional website or safety consultation, feel free to reach out!
+                    </p>
+
+                    <div class="contact-methods">
+                        <div class="contact-method slide-in-left">
+                            <div class="method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="method-details">
+                                <h3>Email Me</h3>
+                                <a href="mailto:mahlatsimashifane@gmail.com" class="method-link">
+                                    mahlatsimashifane@gmail.com
+                                </a>
+                                <p>I'll respond within 24 hours</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-method slide-in-left-delay">
+                            <div class="method-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="method-details">
+                                <h3>Call Me</h3>
+                                <a href="tel:0812668996" class="method-link">
+                                    081 266 8996
+                                </a>
+                                <p>Available Mon-Fri, 9AM-5PM</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-method slide-in-left-delay-2">
+                            <div class="method-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="method-details">
+                                <h3>Location</h3>
+                                <div class="method-link">
+                                    Gauteng, South Africa
+                                </div>
+                                <p>Open to remote & local opportunities</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <h3 class="slide-up">Follow My Work</h3>
+                        <div class="social-grid">
+                            <a href="https://linkedin.com/in/mahlatsi-mashifane" class="social-link linkedin slide-in-left" target="_blank">
+                                <i class="fab fa-linkedin-in"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/venomsirr" class="social-link github slide-up" target="_blank">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://venomsirr.github.io/M-Mashifane-Portfolio/" class="social-link portfolio slide-in-right" target="_blank">
+                                <i class="fas fa-globe"></i>
+                                <span>Portfolio</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <div class="form-header slide-in-right">
+                        <h3>Send a Message</h3>
+                        <p>Fill out the form below and I'll get back to you as soon as possible.</p>
+                    </div>
+
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group slide-up">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                            <div class="form-icon">
+                                <i class="fas fa-user"></i>
+                            </div>
+                        </div>
+
+                        <div class="form-group slide-up-delay-1">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                            <div class="form-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                        </div>
+
+                        <div class="form-group slide-up-delay-2">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject">
+                                <option value="">Select a subject</option>
+                                <option value="safety-opportunity">Safety Management Opportunity</option>
+                                <option value="web-development">Web Development Project</option>
+                                <option value="collaboration">Collaboration</option>
+                                <option value="consultation">Consultation</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <div class="form-icon">
+                                <i class="fas fa-tag"></i>
+                            </div>
+                        </div>
+
+                        <div class="form-group slide-up-delay-3">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" required placeholder="Tell me about your project, opportunity, or how I can help you..." rows="5"></textarea>
+                            <div class="form-icon textarea-icon">
+                                <i class="fas fa-comment"></i>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary submit-btn pulse-glow">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+
+                    <div class="form-success" id="formSuccess" style="display: none;">
+                        <div class="success-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3>Message Sent Successfully!</h3>
+                        <p>Thank you for your message. I'll get back to you within 24 hours.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="contact-faq">
+        <div class="container">
+            <h2 class="section-title text-center fly-in">Frequently Asked Questions</h2>
+            
+            <div class="faq-grid">
+                <div class="faq-item scale-in">
+                    <div class="faq-question">
+                        <h3>What types of projects do you take on?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>I work on safety management consulting, risk assessments, site inspections, and web development projects including business websites, e-commerce platforms, and portfolio sites. I specialize in creating modern, responsive websites that deliver great user experiences.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item scale-in-delay-1">
+                    <div class="faq-question">
+                        <h3>What is your typical response time?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>I typically respond to all inquiries within 24 hours. For urgent safety consultation matters or time-sensitive web projects, feel free to call me directly at 081 266 8996 for a quicker response.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item scale-in-delay-2">
+                    <div class="faq-question">
+                        <h3>Do you offer freelance web development services?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! I offer freelance web development services including website design, development, and maintenance. I specialize in creating modern, responsive websites with quote request functionality, perfect for businesses that need professional online presence without complex payment systems.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item scale-in-delay-3">
+                    <div class="faq-question">
+                        <h3>Are you available for full-time safety management roles?</h3>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! I'm actively seeking full-time safety management opportunities where I can apply my expertise in risk assessment, safety compliance, and workplace safety protocols. I'm passionate about creating safer work environments and ensuring regulatory compliance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="contact-cta">
+        <div class="container">
+            <div class="cta-card">
+                <div class="cta-content">
+                    <h2 class="cta-title slide-up">Ready to Get Started?</h2>
+                    <p class="cta-text slide-up-delay">Whether you have a safety management need, a web development project, or want to discuss career opportunities, I'm here to help bring your vision to life.</p>
+                    <div class="cta-buttons slide-up-delay">
+                        <a href="tel:0812668996" class="btn btn-primary pulse-glow">
+                            <i class="fas fa-phone"></i>
+                            Call Now
+                        </a>
+                        <a href="mailto:mahlatsimashifane@gmail.com" class="btn btn-secondary">
+                            <i class="fas fa-envelope"></i>
+                            Email Me
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">MM</div>
+                    <p>Safety Management Professional & Web Developer</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="experience.html">Experience</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://linkedin.com/in/mahlatsi-mashifane" class="social-link">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/venomsirr" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:mahlatsimashifane@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Mahlatsi Mashifane. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="navigation.js"></script>
+</body>
+</html>
