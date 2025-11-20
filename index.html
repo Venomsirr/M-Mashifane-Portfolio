@@ -1,295 +1,186 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width,initial-scale=1" name="viewport"/>
-<title>Mahlatsi Mashifane — Portfolio</title>
-<link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='black'/%3E%3Ctext x='50%' y='54%' text-anchor='middle' font-size='32' font-family='Arial' font-weight='bold' fill='gold' filter='url(%23glow)'%3EMM%3C/text%3E%3Cdefs%3E%3Cfilter id='glow'%3E%3CfeGaussianBlur stdDeviation='2.5' result='coloredBlur'/%3E%3CfeMerge%3E%3CfeMergeNode in='coloredBlur'/%3E%3CfeMergeNode in='SourceGraphic'/%3E%3C/feMerge%3E%3C/filter%3E%3C/defs%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet"/>
-<style>
-    body {
-      background: radial-gradient(ellipse at 50% 0%, #181c2b 0%, #06070a 100%);
-      color: #e6eef8;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-      box-shadow: 0 0 0 50vmax #06070a inset;
-    }
-    .glow {
-      box-shadow: 0 0 8px 1px #00ffd0, 0 0 16px 4px #1e293b44;
-    }
-    .glow-text {
-      text-shadow: 0 0 8px #00ffd0, 0 0 16px #1e293b;
-    }
-    .navbar-sticky {
-      position: sticky;
-      top: 0.5rem;
-      z-index: 25;
-      background: rgba(5,6,10,0.43);
-      box-shadow: 0 1px 12px #00ffd033;
-      border-radius: 1.0rem;
-      backdrop-filter: blur(4px);
-    }
-    .pulse-glow {
-      animation: pulseGlow 1.8s infinite;
-      box-shadow: 0 0 0 0 #ffd70088, 0 0 8px 2px #ffd70044;
-    }
-    @keyframes pulseGlow {
-      0% { box-shadow: 0 0 0 0 #ffd70088, 0 0 8px 2px #ffd70044; }
-      70% { box-shadow: 0 0 0 12px #ffd70011, 0 0 16px 4px #ffd70044; }
-      100% { box-shadow: 0 0 0 0 #ffd70088, 0 0 8px 2px #ffd70044; }
-    }
-    .social-icon {
-      color: #ffd700;
-      background: #181c2b;
-      border-radius: 50%;
-      padding: 0.4em;
-      margin: 0 0.1em;
-      font-size: 1.2em;
-      transition: box-shadow 0.2s, color 0.2s;
-      box-shadow: 0 0 8px #ffd70044;
-    }
-    .social-icon:hover {
-      color: #00ffd0;
-      box-shadow: 0 0 16px #00ffd0aa;
-    }
-    .footer-socials {
-      margin-top: 1em;
-      margin-bottom: 0.5em;
-    }
-    /* Scroll animation base */
-    .scroll-animate { opacity: 0; transform: translateY(40px); transition: all 0.7s cubic-bezier(.4,0,.2,1); }
-    .scroll-animate.visible { opacity: 1; transform: none; }
-  </style>
-<meta content="Portfolio of Mahlatsi Mashifane — Safety Management &amp; Web Developer" name="description"/>
-<script src="https://cdn.tailwindcss.com"></script>
-<style>
-    html,body,#bg-canvas{height:100%;}
-    body{background:linear-gradient(180deg,#06070a,#071028);color:#e6eef8;font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;}
-    .glass{background:rgba(255,255,255,0.03);backdrop-filter:blur(6px);border:1px solid rgba(255,255,255,0.04);}
-    nav a{transition:all .2s;}nav a:hover{opacity:.9;transform:translateY(-2px);}
-    .project-card:hover{transform:translateY(-6px) scale(1.01);}
-    #canvas-wrap{position:fixed;inset:0;z-index:-1;pointer-events:none;}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahlatsi Mashifane - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body class="min-h-screen antialiased">
-<div id="canvas-wrap"><canvas id="bg-canvas"></canvas></div>
-<!-- Only user photos remain, floating images removed as requested -->
-<header class="w-full py-4 px-2 flex flex-col items-center navbar-sticky top-4 left-1/2 -translate-x-1/2 max-w-2xl mx-auto z-40">
-  <div class="flex items-center gap-2 mb-2">
-    <div class="w-9 h-9 rounded-full bg-gradient-to-r from-yellow-400 via-yellow-600 to-yellow-400 flex items-center justify-center text-base font-extrabold glow-text">MM</div>
-    <div>
-      <div class="text-xs font-semibold glow-text">Mahlatsi Mashifane</div>
-      <div class="text-[10px] opacity-70">Safety Management • Web Developer</div>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="floating-shape shape-1"></div>
+        <div class="floating-shape shape-2"></div>
+        <div class="floating-shape shape-3"></div>
     </div>
-  </div>
-  <nav class="flex items-center gap-3 text-xs opacity-90 justify-center">
-    <a class="nav-glow" href="#about">About</a>
-    <a class="nav-glow" href="#projects">Projects</a>
-    <a class="nav-glow" href="#skills">Skills</a>
-    <a class="nav-glow" href="#experience">Experience</a>
-    <a class="nav-glow px-2 py-1 rounded-md bg-yellow-400/20 text-yellow-300 font-semibold" href="resume.html">Resume</a>
-    <a class="nav-glow px-2 py-1 rounded-md bg-indigo-600/20" href="#contact">Contact</a>
-    <a class="social-icon nav-glow" href="https://linkedin.com/in/mahlatsi-mashifane" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-    <a class="social-icon nav-glow" href="#" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-  </nav>
-</header>
-<main class="max-w-6xl mx-auto pt-36 px-6 md:px-12 pb-24 relative z-10">
-<section class="grid md:grid-cols-2 gap-8 items-center scroll-animate relative overflow-hidden" id="hero">
-<!-- Animated SVG Glow Background -->
-<svg class="absolute -z-10 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 blur-[2px] opacity-80 animate-spin-slow" fill="none" height="700" style="pointer-events:none;" viewbox="0 0 700 700" width="700" xmlns="http://www.w3.org/2000/svg">
-<defs>
-<radialgradient cx="50%" cy="50%" fx="50%" fy="50%" id="glowGrad" r="50%">
-<stop offset="0%" stop-color="#ffd700" stop-opacity="0.7"></stop>
-<stop offset="60%" stop-color="#00ffd0" stop-opacity="0.3"></stop>
-<stop offset="100%" stop-color="#181c2b" stop-opacity="0"></stop>
-</radialgradient>
-</defs>
-<circle cx="350" cy="350" fill="url(#glowGrad)" r="240"></circle>
-<ellipse cx="350" cy="350" fill="#ffd70022" rx="180" ry="80">
-<animate attributename="rx" dur="6s" repeatcount="indefinite" values="180;220;180"></animate>
-</ellipse>
-<ellipse cx="350" cy="350" fill="#00ffd022" rx="120" ry="40">
-<animate attributename="ry" dur="5s" repeatcount="indefinite" values="40;70;40"></animate>
-</ellipse>
-<circle cx="350" cy="350" fill="#ffd70011" r="120">
-<animate attributename="r" dur="7s" repeatcount="indefinite" values="120;150;120"></animate>
-</circle>
-</svg>
-<style>
-        .animate-spin-slow { animation: spinSlow 32s linear infinite; }
-        @keyframes spinSlow { 100% { transform: rotate(360deg); } }
-      </style>
-<div>
-<h1 class="text-4xl md:text-6xl font-extrabold leading-tight">Mahlatsi Mashifane</h1>
-<p class="mt-4 text-xl opacity-80 max-w-xl">Dedicated Safety Management professional (Diploma in Safety Management — graduated Apr 2025) and Web Developer building modern, accessible, and performant web experiences. I combine attention to detail in safety with hands-on technical web skills.</p>
-<div class="mt-6 flex gap-4 items-center">
-<a class="px-5 py-3 bg-indigo-600 rounded-md text-white shadow-md" href="#projects">View Projects</a>
-<a class="px-5 py-3 glass rounded-md font-semibold text-yellow-300 border border-yellow-400/40 hover:bg-yellow-400/10 transition" href="resume.html">Resume</a>
-<a class="px-5 py-3 bg-yellow-400 text-black font-bold rounded-md shadow-md pulse-glow glow" href="mailto:mahlatsimashifane@gmail.com" style="letter-spacing:0.03em;">🔥 Hire Me</a>
-</div>
-<div class="mt-6 flex gap-4 text-sm opacity-80">
-<div>Gauteng, South Africa</div>
-<div>•</div>
-<div>Mobile: 081 266 8996</div>
-</div>
-<div class="mt-5 flex gap-3">
-<a class="social-icon" href="https://linkedin.com/in/mahlatsi-mashifane" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-<a class="social-icon" href="#" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-</div>
-</div>
-<div class="flex flex-col gap-6 items-center justify-center">
-<div class="w-80 h-80 rounded-2xl overflow-hidden glass p-3 flex items-center justify-center">
-<img alt="Graduation photo" class="object-cover w-full h-full rounded-xl shadow-lg" src="images/profile/fnb.jpg.jpg"/>
-</div>
-<div class="w-64 h-64 rounded-2xl overflow-hidden glass p-3 flex items-center justify-center">
-<img alt="Professional photo" class="object-cover w-full h-full rounded-xl shadow-lg" src="images/profile/grad1.jpg.jpg"/>
-</div>
-</div>
-</section>
-<section class="mt-20 scroll-animate" id="projects">
-<h2 class="text-2xl font-semibold">Selected Projects</h2>
-<p class="mt-2 text-sm opacity-80">Web development work for small/medium businesses and freelance projects.</p>
-<div class="mt-6 grid md:grid-cols-2 gap-6">
-<article class="project-card p-6 glass rounded-2xl transition-transform duration-200">
-<h3 class="font-semibold text-lg">Jadula Trading Enterprise (Website)</h3>
-<p class="mt-2 text-sm opacity-80">Designed and launched the company's website with a mobile-first approach, responsive layout, and animations for better engagement.</p>
-<div class="mt-3 text-xs opacity-80">Tech: HTML, CSS, JavaScript</div>
-<div class="mt-4 flex gap-3">
-<a class="px-3 py-2 rounded-md glass text-sm" href="#">Live</a>
-<a class="px-3 py-2 rounded-md glass text-sm" href="#">Code</a>
-</div>
-</article>
-<article class="project-card p-6 glass rounded-2xl transition-transform duration-200">
-<h3 class="font-semibold text-lg">Gadget Nexus (Founder &amp; Website)</h3>
-<p class="mt-2 text-sm opacity-80">Built a branded site for Gadget Nexus showcasing products and services with an easy-to-update CMS-friendly layout.</p>
-<div class="mt-3 text-xs opacity-80">Tech: HTML, CSS, JS</div>
-<div class="mt-4 flex gap-3">
-<a class="px-3 py-2 rounded-md glass text-sm" href="#">Live</a>
-<a class="px-3 py-2 rounded-md glass text-sm" href="#">Code</a>
-</div>
-</article>
-</div>
-</section>
-<section class="mt-20 grid md:grid-cols-3 gap-6 items-start scroll-animate" id="about">
-<div class="md:col-span-2 p-6 glass rounded-2xl">
-<h2 class="text-xl font-semibold">About</h2>
-<p class="mt-3 text-sm opacity-80">Dedicated and detail-oriented Safety Management professional with practical experience in workplace safety and risk mitigation. Skilled in web development and IT with successful freelance projects that delivered modern, responsive websites.
-        </p>
-<div class="mt-4 grid grid-cols-2 gap-4">
-<div class="p-3 glass rounded-lg">
-<div class="text-xs opacity-70">Diploma</div>
-<div class="font-semibold">Safety Management</div>
-<div class="text-xs opacity-70">Vaal University of Technology (Expected Apr 2025)</div>
-</div>
-<div class="p-3 glass rounded-lg">
-<div class="text-xs opacity-70">Languages</div>
-<div class="font-semibold">English, IsiZulu, Sepedi, Isindebele</div>
-</div>
-</div>
-</div>
-<aside class="p-6 glass rounded-2xl">
-<h3 class="text-sm opacity-80">Quick facts</h3>
-<ul class="mt-3 text-sm opacity-80 space-y-2">
-<li>Safety Assistant — Jadula Trading (2025)</li>
-<li>Client Service Specialist — FNB (2025)</li>
-<li>Founder, Gadget Nexus (2025)</li>
-</ul>
-</aside>
-</section>
-<section class="mt-20 scroll-animate" id="skills">
-<h2 class="text-2xl font-semibold">Core Competencies</h2>
-<div class="mt-4 flex flex-wrap gap-3">
-<span class="px-3 py-1 glass rounded-full text-sm">Safety Management</span><span class="px-3 py-1 glass rounded-full text-sm">Risk Assessment</span><span class="px-3 py-1 glass rounded-full text-sm">Web Development</span><span class="px-3 py-1 glass rounded-full text-sm">React</span><span class="px-3 py-1 glass rounded-full text-sm">Next.js</span><span class="px-3 py-1 glass rounded-full text-sm">Tailwind</span><span class="px-3 py-1 glass rounded-full text-sm">Three.js</span><span class="px-3 py-1 glass rounded-full text-sm">JavaScript</span><span class="px-3 py-1 glass rounded-full text-sm">C#</span><span class="px-3 py-1 glass rounded-full text-sm">MS Office</span>
-</div>
-</section>
-<section class="mt-20 scroll-animate" id="experience">
-<h2 class="text-2xl font-semibold">Experience</h2>
-<div class="mt-6 space-y-6">
-<div class="glass rounded-2xl p-6">
-<div class="flex justify-between items-start">
-<div>
-<div class="font-semibold">Client Service Specialist (Promoter) — FNB</div>
-<div class="text-xs opacity-80">Feb 2025 – Aug 2025</div>
-</div>
-</div>
-<ul class="mt-3 text-sm opacity-80 list-disc ml-5">
-<li>Promoted FNB products at ATMs, increasing brand awareness and sales.</li>
-<li>Engaged diverse clients and provided solutions to queries.</li>
-<li>Worked in a target-driven environment and met objectives consistently.</li>
-</ul>
-</div>
-<div class="glass rounded-2xl p-6">
-<div class="font-semibold">Web Developer (Freelance) — Jadula Trading Enterprise (2025)</div>
-<ul class="mt-3 text-sm opacity-80 list-disc ml-5">
-<li>Designed and launched the official company website with mobile responsiveness and animations.</li>
-</ul>
-</div>
-<div class="glass rounded-2xl p-6">
-<div class="font-semibold">Founder &amp; Web Developer — Gadget Nexus (2025)</div>
-<ul class="mt-3 text-sm opacity-80 list-disc ml-5">
-<li>Designed, developed, and launched the Gadget Nexus website focused on tech products and services.</li>
-</ul>
-</div>
-</div>
-</section>
-<section class="mt-20 mb-20 grid md:grid-cols-2 gap-6 items-start scroll-animate" id="contact">
-<div class="p-6 glass rounded-2xl">
-<h2 class="text-2xl font-semibold">Contact</h2>
-<p class="mt-2 text-sm opacity-80">Email me: <a class="underline" href="mailto:mahlatsimashifane@gmail.com">mahlatsimashifane@gmail.com</a></p>
-<p class="mt-2 text-sm opacity-80">Phone: 081 266 8996</p>
-<form action="https://formspree.io/f/xwkgyyqg" class="mt-4 space-y-3" id="contact-form" method="POST">
-<input class="w-full p-3 glass rounded-md glow" name="name" placeholder="Your name" required=""/>
-<input class="w-full p-3 glass rounded-md glow" name="email" placeholder="Your email" required="" type="email"/>
-<textarea class="w-full p-3 glass rounded-md glow" name="message" placeholder="Message" required="" rows="5"></textarea>
-<button class="px-4 py-2 bg-yellow-400 text-black font-bold rounded-md shadow-md pulse-glow glow" type="submit">Send</button>
-</form>
-<div class="mt-3 text-sm opacity-80" id="contact-msg"></div>
-<div class="mt-2 text-xs opacity-60">Form sends directly to my Gmail via Formspree. Your message is secure.</div>
-</div>
-<div class="p-6 glass rounded-2xl flex flex-col gap-6 items-center justify-center">
-<img alt="Graduation photo 2" class="rounded-xl object-cover w-full h-64 shadow-lg" src="images/profile/grad2.jpg (2).jpg"/>
-<img alt="Selfie" class="rounded-xl object-cover w-full h-40 shadow" src="images/profile/selfie.jpg.jpg"/>
-</div>
-</section>
-<footer class="text-center text-xs opacity-70 mt-8">
-<div class="footer-socials">
-<a class="social-icon" href="https://linkedin.com/in/mahlatsi-mashifane" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-<a class="social-icon" href="#" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-</div>
-<div class="mb-1">
-<a class="underline text-yellow-300 hover:text-yellow-400 transition" download="" href="cv-latest.pdf">Download latest CV (auto-updated)</a>
-</div>
-      © 2025 Mahlatsi Mashifane • Built with care
-    </footer>
-</main>
-<!-- Removed cartoon 3D background for real floating images -->
-<script>
-    // Contact form (will be replaced with Formspree integration)
-    const form = document.getElementById('contact-form');
-    const msg = document.getElementById('contact-msg');
-    form.addEventListener('submit', (e)=>{
-      e.preventDefault();
-      const data = new FormData(form);
-      const name = data.get('name'), email = data.get('email'), message = data.get('message');
-      const subject = encodeURIComponent('Portfolio contact from ' + name);
-      const body = encodeURIComponent(message + "\n\nContact: " + email);
-      window.location.href = "mailto:mahlatsimashifane@gmail.com?subject=" + subject + "&body=" + body;
-      msg.textContent = 'Opening your email client...';
-    });
 
-    // Scroll-triggered animations
-    function revealOnScroll() {
-      document.querySelectorAll('.scroll-animate').forEach(el => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 80) {
-          el.classList.add('visible');
-        }
-      });
-    }
-    window.addEventListener('scroll', revealOnScroll);
-    window.addEventListener('DOMContentLoaded', () => {
-      revealOnScroll();
-    });
-  </script>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="logo-icon">MM</div>
+                <div class="logo-text">
+                    <div class="name">Mahlatsi Mashifane</div>
+                    <div class="title">Safety Management • Web Developer</div>
+                </div>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="experience.html" class="nav-link">Experience</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <button class="theme-toggle" id="themeToggle">🌙</button>
+            </div>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-page">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge fly-in">🚀 Available for Opportunities</div>
+                <h1 class="hero-title">
+                    <span class="title-line fly-in-delay-1">Mahlatsi</span>
+                    <span class="title-line fly-in-delay-2">Mashifane</span>
+                </h1>
+                <h2 class="hero-subtitle grow-in">Safety Management Professional & Web Developer</h2>
+                <p class="hero-description slide-up">
+                    Passionate Safety Management graduate with hands-on experience in workplace safety protocols and modern web development. 
+                    Combining technical expertise with safety compliance to create secure, efficient digital solutions for businesses.
+                </p>
+                
+                <div class="hero-stats slide-up-delay">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="5">0</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="2">0</div>
+                        <div class="stat-label">Happy Clients</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="6">0</div>
+                        <div class="stat-label">Certifications</div>
+                    </div>
+                </div>
+
+                <div class="hero-buttons">
+                    <a href="contact.html" class="btn btn-primary pulse-glow">Get In Touch</a>
+                    <a href="about.html" class="btn btn-secondary">Learn More</a>
+                    <a href="cv-latest.pdf" download class="btn btn-outline">
+                        <i class="fas fa-download"></i> Download CV
+                    </a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="floating-card card-1">
+                    <img src="images/profile/grad1.jpg" alt="Graduation" onerror="this.style.display='none'">
+                </div>
+                <div class="floating-card card-2">
+                    <img src="images/profile/selfie.jpg" alt="Professional" onerror="this.style.display='none'">
+                </div>
+                <div class="tech-stack">
+                    <div class="tech-item bounce">
+                        <span>HTML</span>
+                    </div>
+                    <div class="tech-item bounce-delay-1">
+                        <span>CSS</span>
+                    </div>
+                    <div class="tech-item bounce-delay-2">
+                        <span>JS</span>
+                    </div>
+                    <div class="tech-item bounce-delay-3">
+                        <span>Safety</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="scroll-text">Scroll to explore</div>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Quick Links Section -->
+    <section class="quick-links">
+        <div class="container">
+            <div class="links-grid">
+                <a href="about.html" class="link-card slide-in-left">
+                    <div class="link-icon">👨‍💼</div>
+                    <h3>About Me</h3>
+                    <p>Discover my background, diverse skills, and professional certifications</p>
+                    <div class="link-arrow">→</div>
+                </a>
+                
+                <a href="projects.html" class="link-card slide-in-right">
+                    <div class="link-icon">🚀</div>
+                    <h3>Projects</h3>
+                    <p>Explore my web development projects and safety management work</p>
+                    <div class="link-arrow">→</div>
+                </a>
+                
+                <a href="experience.html" class="link-card slide-in-left">
+                    <div class="link-icon">💼</div>
+                    <h3>Experience</h3>
+                    <p>View my professional journey and hands-on experience</p>
+                    <div class="link-arrow">→</div>
+                </a>
+                
+                <a href="contact.html" class="link-card slide-in-right">
+                    <div class="link-icon">📞</div>
+                    <h3>Contact</h3>
+                    <p>Get in touch for safety roles or web development projects</p>
+                    <div class="link-arrow">→</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">MM</div>
+                    <p>Safety Management Professional & Web Developer</p>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="experience.html">Experience</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://linkedin.com/in/mahlatsi-mashifane" class="social-link">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/venomsirr" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:mahlatsimashifane@gmail.com" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Mahlatsi Mashifane. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="navigation.js"></script>
 </body>
 </html>
